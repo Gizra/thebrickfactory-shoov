@@ -63,10 +63,25 @@ describe('Visual monitor testing', function() {
       .url(baseUrl)
       .webdrivercss(testName + '.homepage', {
         name: '1',
-        exclude: [],
-        remove: [],
-        hide: [],
-        screenWidth: selectedCaps == 'chrome' ? [640, 960, 1200] : undefined,
+        exclude:
+          [
+            // Image image.
+            '.home_image_caption h2',
+            // Services list.
+            '.services-list .icon',
+            // Biopeople
+            '.biopeople .bio_container a img',
+
+          ],
+        hide:
+          [
+            // Services list.
+            '.services-list h3',
+            '.services-list ul',
+            // Biopeople
+            '.biopeople .bio_caption',
+          ],
+        screenWidth: selectedCaps == 'chrome' ? [960] : undefined,
       }, resultsCallback)
       .call(done);
   });
