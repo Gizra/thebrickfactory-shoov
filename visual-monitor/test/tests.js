@@ -65,8 +65,6 @@ describe('Visual monitor testing', function() {
         name: '1',
         exclude:
           [
-            // Image image.
-            '.home_image_caption h2',
             // Services list.
             '.services-list .icon',
             // Biopeople
@@ -75,6 +73,8 @@ describe('Visual monitor testing', function() {
           ],
         hide:
           [
+            // Image image.
+            '.home_image_caption h2',
             // Services list.
             '.services-list h3',
             '.services-list ul',
